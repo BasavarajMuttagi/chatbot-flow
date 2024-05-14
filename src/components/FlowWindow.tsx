@@ -1,6 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 import ReactFlow, {
-  Background,
   Controls,
   Node,
   ReactFlowInstance,
