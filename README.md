@@ -1,30 +1,57 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Chatbot flow builder
 
-Currently, two official plugins are available:
+This document provides instructions for installing and running the Chatbot flow builder.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🔗 Demo (https://chatbot-flow-puce.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Steps to Install and Run
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Follow these steps to install and run the project:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. **Clone the Repository:**
+
+    ```bash
+    git clone [repository_url]
+    ```
+
+2. **Install Dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3. **Run the Project:**
+
+    ```bash
+    npm run dev
+    ```
+
+    This command will start the development server and run the project. You should be able to access the project in your browser at the specified address (usually `http://localhost:5173/`).
+
+
+
+## Technologies Used
+- **Frontend:** React, React Flow, Tailwind, zustand, react-hot-toast, tailwind-merge, nanoid 
+- **Deployment:** Project deployed on Vercel
+## Features
+
+- Drag and drop nodes
+- Edit nodes
+- Connect nodes
+- Disconnect nodes
+- Save Flow
+- Delete Flow
+- Clear Flow
+- Open Saved Flow
+- Update Flow
+
+
+## Contributing
+Contributions are welcome! Please feel free to open issues or submit pull requests.
+
+## License
+This project is licensed under the MIT License.
+
