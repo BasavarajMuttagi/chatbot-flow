@@ -17,9 +17,18 @@ const storageModule = {
   storage: createJSONStorage(() => sessionStorage),
 };
 
+type SaveFlowType = {
+  flowName: string;
+  flowId: string;
+  nodes: Node[];
+  edges: Edge[];
+};
 const creator = (set: any, get: any) => ({
   nodes: [] as Node[],
   edges: [] as Edge[],
+  flowId: "",
+  flowName: "",
+  savedFlows: [] as SaveFlowType[],
   onNodesChange: (changes: NodeChange[]) => {
     set({
       nodes: applyNodeChanges(changes, get().nodes),
@@ -52,6 +61,31 @@ const creator = (set: any, get: any) => ({
         }
         return node;
       }),
+    });
+  },
+
+  saveNewFlow: (savedFlows: SaveFlowType[]) => {
+    set({ savedFlows });
+  },
+  updateSavedFlow: () => {
+    set({
+      nodes: get().savedFlows.map((eachFlow: SaveFlowType) => {
+        if (eachFlow.flowId === get().flowId) {
+          eachFlow = {
+            ...eachFlow,
+            edges: get().edges,
+            nodes: get().nodes,
+          };
+        }
+        return eachFlow;
+      }),
+    });
+  },
+  removeSavedFlow: (flowId: string) => {
+    set({
+      savedFlows: get().savedFlows.map(
+        (eachFlow: SaveFlowType) => eachFlow.flowId != flowId
+      ),
     });
   },
 });
