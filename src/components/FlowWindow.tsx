@@ -76,7 +76,6 @@ function FlowWindow() {
           edgeTypes={edgeTypes}
           fitView
         >
-          <Background />
           <Controls />
         </ReactFlow>
       </div>
