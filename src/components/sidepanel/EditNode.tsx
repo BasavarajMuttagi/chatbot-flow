@@ -1,8 +1,9 @@
 import { ArrowLeft } from "@phosphor-icons/react";
-import { SeletedNodeContext } from "../../App";
+
 import { useContext } from "react";
 import useChatFlowStore from "../../store";
 import { Node } from "reactflow";
+import { SeletedNodeContext } from "../../Pages/Home";
 
 function EditNode() {
   const [selectedNodeId, setNodeId] = useContext(SeletedNodeContext);

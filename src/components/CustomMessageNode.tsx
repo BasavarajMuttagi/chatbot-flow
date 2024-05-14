@@ -1,8 +1,8 @@
 import { Handle, NodeProps, Position } from "reactflow";
 import { DragEvent, useContext } from "react";
 import { ChatCircleText } from "@phosphor-icons/react";
-import { SeletedNodeContext } from "../App";
 import { twMerge } from "tailwind-merge";
+import { SeletedNodeContext } from "../Pages/Home";
 function CustomMessageNode({ data, id }: NodeProps) {
   const [selectedNodeId, setNodeId] = useContext(SeletedNodeContext);
   const onDragStart = (event: DragEvent<HTMLDivElement>, nodeType: string) => {

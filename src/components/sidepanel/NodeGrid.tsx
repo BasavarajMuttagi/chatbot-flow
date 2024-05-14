@@ -1,4 +1,5 @@
 import MessageNode from "./MessageNode";
+import PlaceHolder from "./PlaceHolder";
 
 function NodeGrid() {
   return (
@@ -8,33 +9,33 @@ function NodeGrid() {
     >
       <div className="flex flex-wrap justify-center gap-4">
         <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
-        <MessageNode />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
+        <PlaceHolder />
       </div>
     </div>
   );

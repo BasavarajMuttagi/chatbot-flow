@@ -17,11 +17,18 @@ const storageModule = {
   storage: createJSONStorage(() => sessionStorage),
 };
 
-type SaveFlowType = {
+export type SaveFlowType = {
   flowName: string;
   flowId: string;
   nodes: Node[];
   edges: Edge[];
+};
+
+const initailState: SaveFlowType = {
+  flowId: "",
+  flowName: "",
+  edges: [],
+  nodes: [],
 };
 const creator = (set: any, get: any) => ({
   nodes: [] as Node[],
@@ -71,22 +78,30 @@ const creator = (set: any, get: any) => ({
     set({
       nodes: get().savedFlows.map((eachFlow: SaveFlowType) => {
         if (eachFlow.flowId === get().flowId) {
-          eachFlow = {
-            ...eachFlow,
-            edges: get().edges,
-            nodes: get().nodes,
-          };
+          eachFlow.edges = get().edges;
+          eachFlow.nodes = get().nodes;
         }
         return eachFlow;
       }),
     });
   },
   removeSavedFlow: (flowId: string) => {
+    const result = get().savedFlows.filter(
+      (eachFlow: SaveFlowType) => eachFlow.flowId !== flowId
+    );
+
     set({
-      savedFlows: get().savedFlows.map(
-        (eachFlow: SaveFlowType) => eachFlow.flowId != flowId
-      ),
+      savedFlows: result.length ? result : [],
     });
+    creator(set, get).resetStore();
+  },
+
+  resetStore: () => {
+    set(initailState);
+  },
+
+  restoreFlow: (flow: SaveFlowType) => {
+    set(flow);
   },
 });
 

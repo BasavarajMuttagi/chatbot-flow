@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import EditNode from "./EditNode";
 import NodeGridWithSearch from "./NodeGridWithSearch";
-import { SeletedNodeContext } from "../../App";
+
 import { twMerge } from "tailwind-merge";
+import { SeletedNodeContext } from "../../Pages/Home";
 
 function SidePanel() {
   const [selectedNodeId, _] = useContext(SeletedNodeContext);
