@@ -5,7 +5,7 @@ import TopBar from "../components/TopBar";
 
 function HomeLayout() {
   return (
-    <div className="bg-neutral-900 h-screen flex flex-col">
+    <div className="bg-white h-screen flex flex-col">
       <TopBar />
       <div className="flex flex-1">
         <div className="flex-1">
