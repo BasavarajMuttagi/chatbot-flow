@@ -52,7 +52,9 @@ function FlowWindow() {
         id: nanoid(),
         type,
         position: { x: position?.x!, y: position?.y! },
-        data: {},
+        data: {
+          text:"Hello"
+        },
       };
       addNodes(newNode);
     },
