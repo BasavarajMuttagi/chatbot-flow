@@ -18,7 +18,7 @@ function CustomNode() {
             <div className="flex justify-between items-center px-1 py-[2px]">
               <div className="flex items-center space-x-2">
                 <ChatCircleText size={10} className="text-slate-800" />
-                <div className="text-[10px] font-bold">Send Message</div>
+                <div className="text-[10px] font-semibold text-black/75">Send Message</div>
               </div>
               <div className="w-[15px] h-[15px] rounded-full bg-white flex justify-center items-center scale-90">
                 <img
