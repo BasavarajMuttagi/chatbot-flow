@@ -53,7 +53,7 @@ function FlowWindow() {
         type,
         position: { x: position?.x!, y: position?.y! },
         data: {
-          text:"Hello"
+          text: "",
         },
       };
       addNodes(newNode);
@@ -62,7 +62,7 @@ function FlowWindow() {
   );
 
   return (
-    <div className="h-full w-full border border-slate-600/35">
+    <div className="h-full w-full border-b border-r border-slate-600/35">
       <div className="h-full" ref={reactFlowWrapper}>
         <ReactFlow
           nodes={nodes}

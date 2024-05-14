@@ -44,6 +44,16 @@ const creator = (set: any, get: any) => ({
   setEdges: (edges: Edge[]) => {
     set({ edges });
   },
+  updateNodeText: (nodeId: string, text: string) => {
+    set({
+      nodes: get().nodes.map((node: Node) => {
+        if (node.id === nodeId) {
+          node.data = { ...node.data, text };
+        }
+        return node;
+      }),
+    });
+  },
 });
 
 const useChatFlowStore = create(persist(creator, storageModule));
