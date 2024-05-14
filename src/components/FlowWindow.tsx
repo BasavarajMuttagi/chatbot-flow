@@ -20,7 +20,7 @@ function FlowWindow() {
     useChatFlowStore();
   const nodeTypes = useMemo(
     () => ({
-      chatNode: CustomMessageNode,
+      message: CustomMessageNode,
     }),
     []
   );
@@ -39,7 +39,6 @@ function FlowWindow() {
 
   const onDrop = useCallback(
     (event: any) => {
-      console.log("dropped");
       event.preventDefault();
       const type = event.dataTransfer.getData("application/reactflow");
       if (typeof type === "undefined" || !type) {
@@ -52,7 +51,7 @@ function FlowWindow() {
       });
       const newNode: Node = {
         id: nanoid(),
-        type: "chatNode",
+        type,
         position: { x: position?.x!, y: position?.y! },
         data: {},
       };
@@ -62,7 +61,7 @@ function FlowWindow() {
   );
 
   return (
-    <div className="h-full w-full border">
+    <div className="h-full w-full border border-slate-600/35">
       <div className="h-full" ref={reactFlowWrapper}>
         <ReactFlow
           nodes={nodes}

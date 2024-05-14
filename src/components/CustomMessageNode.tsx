@@ -9,7 +9,7 @@ function CustomNode() {
     <>
       <div
         draggable
-        onDragStart={(event) => onDragStart(event, "chatNode")}
+        onDragStart={(event) => onDragStart(event, "message")}
         className="h-20 w-40 rounded  flex flex-col items-center justify-between border border-neutral-700/50 overflow-x-hidden relative bg-neutral-800"
       ></div>
       <Handle type="source" position={Position.Right} />

@@ -1,20 +1,9 @@
-import CustomNode from "../CustomMessageNode";
+import NodeGridWithSearch from "./NodeGridWithSearch";
 
 function SidePanel() {
   return (
-    <div className="border border-slate-300/90 text-black bg-blue-500 w-full h-full grid grid-cols-2 place-items-center gap-x-4 gap-y-2">
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
-      <CustomNode />
+    <div className="text-black bg-white py-4 px-2 flex flex-col max-w-xs w-full">
+      <NodeGridWithSearch />
     </div>
   );
 }

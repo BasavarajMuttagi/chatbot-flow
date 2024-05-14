@@ -1,19 +1,19 @@
 import { ReactFlowProvider } from "reactflow";
 import FlowWindow from "../components/FlowWindow";
 import SidePanel from "../components/sidepanel/SidePanel";
+import TopBar from "../components/TopBar";
 
 function HomeLayout() {
   return (
-    <div className="h-screen  w-full  overflow-y-hidden bg-neutral-900">
-      <div className="h-full w-full flex border">
-        <div className="w-5/6 h-full">
+    <div className="bg-neutral-900 h-screen flex flex-col">
+      <TopBar />
+      <div className="flex flex-1">
+        <div className="flex-1">
           <ReactFlowProvider>
             <FlowWindow />
           </ReactFlowProvider>
         </div>
-        <div className="w-1/6 h-full border">
-          <SidePanel />
-        </div>
+        <SidePanel />
       </div>
     </div>
   );
